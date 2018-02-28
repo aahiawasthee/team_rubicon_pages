@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home - Non Deployable</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <script type="text/javascript">
+        var tr_id = "{TR.ID.NUMBER}";
+        var n = tr_id.length;
+        if (n < 3) tr_id_line = "";
+        else tr_id_line = "Your TR ID is " + tr_id;
+        //document.getElementById("tr_id_status").innerHTML = tr_id_line;
+        var state = {
+            "AL": "Alabama"
+            , "AK": "Alaska"
+            , "AS": "American Samoa"
+            , "AZ": "Arizona"
+            , "AR": "Arkansas"
+            , "CA": "California"
+            , "CO": "Colorado"
+            , "CT": "Connecticut"
+            , "DE": "Delaware"
+            , "DC": "District Of Columbia"
+            , "FM": "Federated States Of Micronesia"
+            , "FL": "Florida"
+            , "GA": "Georgia"
+            , "GU": "Guam"
+            , "HI": "Hawaii"
+            , "ID": "Idaho"
+            , "IL": "Illinois"
+            , "IN": "Indiana"
+            , "IA": "Iowa"
+            , "KS": "Kansas"
+            , "KY": "Kentucky"
+            , "LA": "Louisiana"
+            , "ME": "Maine"
+            , "MH": "Marshall Islands"
+            , "MD": "Maryland"
+            , "MA": "Massachusetts"
+            , "MI": "Michigan"
+            , "MN": "Minnesota"
+            , "MS": "Mississippi"
+            , "MO": "Missouri"
+            , "MT": "Montana"
+            , "NE": "Nebraska"
+            , "NV": "Nevada"
+            , "NH": "New Hampshire"
+            , "NJ": "New Jersey"
+            , "NM": "New Mexico"
+            , "NY": "New York"
+            , "NC": "North Carolina"
+            , "ND": "North Dakota"
+            , "MP": "Northern Mariana Islands"
+            , "OH": "Ohio"
+            , "OK": "Oklahoma"
+            , "OR": "Oregon"
+            , "PW": "Palau"
+            , "PA": "Pennsylvania"
+            , "PR": "Puerto Rico"
+            , "RI": "Rhode Island"
+            , "SC": "South Carolina"
+            , "SD": "South Dakota"
+            , "TN": "Tennessee"
+            , "TX": "Texas"
+            , "UT": "Utah"
+            , "VT": "Vermont"
+            , "VI": "Virgin Islands"
+            , "VA": "Virginia"
+            , "WA": "Washington"
+            , "WV": "West Virginia"
+            , "WI": "Wisconsin"
+            , "WY": "Wyoming"
+        };
+        var region = {
+            "INT": "INT"
+            , "CT": "Region 01"
+            , "ME": "Region 01"
+            , "MA": "Region 01"
+            , "NH": "Region 01"
+            , "RI": "Region 01"
+            , "VT": "Region 01"
+            , "NJ": "Region 02"
+            , "NY": "Region 02"
+            , "PR": "Region 02"
+            , "VI": "Region 02"
+            , "DE": "Region 03"
+            , "MD": "Region 03"
+            , "PA": "Region 03"
+            , "VA": "Region 03"
+            , "WV": "Region 03"
+            , "DC": "Region 03"
+            , "AL": "Region 04"
+            , "FL": "Region 04"
+            , "GA": "Region 04"
+            , "KY": "Region 04"
+            , "MS": "Region 04"
+            , "NC": "Region 04"
+            , "SC": "Region 04"
+            , "TN": "Region 04"
+            , "IL": "Region 05"
+            , "IN": "Region 05"
+            , "MI": "Region 05"
+            , "MN": "Region 05"
+            , "OH": "Region 05"
+            , "WI": "Region 05"
+            , "AR": "Region 06"
+            , "LA": "Region 06"
+            , "NM": "Region 06"
+            , "OK": "Region 06"
+            , "TX": "Region 06"
+            , "IA": "Region 07"
+            , "KS": "Region 07"
+            , "MO": "Region 07"
+            , "NE": "Region 07"
+            , "CO": "Region 08"
+            , "MT": "Region 08"
+            , "ND": "Region 08"
+            , "SD": "Region 08"
+            , "UT": "Region 08"
+            , "WY": "Region 08"
+            , "AZ": "Region 09"
+            , "CA": "Region 09"
+            , "HI": "Region 09"
+            , "NV": "Region 09"
+            , "AS": "Region 09"
+            , "FM": "Region 09"
+            , "GU": "Region 09"
+            , "MH": "Region 09"
+            , "MP": "Region 09"
+            , "PW": "Region 09"
+            , "AK": "Region 10"
+            , "ID": "Region 10"
+            , "OR": "Region 10"
+            , "WA": "Region 10"
+        , };
+        $(document).ready(function () {
+            var theState = $("#stateBlock").text().replace(/\s+/g, '');
+            $("#stateBlock").text(state[theState]);
+            var theRegion = $("#regionBlock").text().replace(/\s+/g, '');
+            $("#regionBlock").text(region[theRegion]);
+            var theStatus = $("#statusBlock").text().replace(/\s+/g, '');
+            if (theStatus === "") {
+                $("#statusBlock").text("None");
+            }
+        });
+    </script>
+    <style>
+        * {
+            font-family: "Lato";
+            line-height: 1.2em;
+            color: #4a4a4a;
+        }
+        
+        body {
+            overflow-x: hidden;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 0 12px 0 rgba(0, 0, 0, .05), -1px 0 12px 0 rgba(0, 0, 0, .05);
+        }
+        
+        .container-fluid {
+            padding-right: 0px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .container {
+            max-width: 1400px;
+        }
+        
+        .row {
+            margin-right: 0;
+        }
+        
+        .btn {
+            border-radius: 0;
+        }
+        
+        a:hover,
+        .btn:hover {
+            -webkit-text-decoration-color: transparent;
+            text-decoration-color: transparent;
+            color: white;
+        }
+        
+        footer h5>a {
+            color: rgb(225, 171, 82);
+            text-align: left;
+        }
+        
+        .btn:focus {
+            color: white;
+        }
+        
+        .operation-button:focus {
+            color: #bc0a0f;
+        }
+        
+        .grey-button:first-child {
+            margin-top: 15px;
+        }
+        
+        .grey-button:last-child {
+            margin-bottom: 0px;
+        }
+        
+        .grey-button {
+            text-transform: uppercase;
+            font-size: 20px;
+            height: 35px;
+            background: #272c33;
+            border-color: #272c33;
+            margin: 15px auto 20px;
+            padding-bottom: 35px;
+            color: white;
+        }
+        
+        .grey-button:hover {
+            color: #fff;
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+        
+        .btn-red {
+            text-transform: uppercase;
+            background: #bc0a0f;
+            border-color: #bc0a0f;
+            color: #fff;
+            min-width: 30vh;
+            height: 46px;
+        }
+        
+        .btn-red:hover {
+            background: #003c58;
+            border: #003c58;
+            color: #fff;
+        }
+        
+        a>.btn-red {
+            color: white;
+            font-size: 14px;
+        }
+        
+        .side-menu-box {
+            background-color: white;
+            box-shadow: 1px 0 12px 0 rgba(0, 0, 0, .05), -1px 0 12px 0 rgba(0, 0, 0, .05);
+            text-transform: uppercase;
+        }
+        
+        .side-menu p,
+        .side-menu p>span,
+        .side-menu h6,
+        .side-menu h3 {
+            color: #272c33;
+        }
+        
+        .side-menu h4 {
+            font-size: 130%;
+        }
+        
+        .side-menu p {
+            font-size: 16px;
+        }
+        
+        .side-menu p>span {
+            font-size: 16px;
+        }
+        
+        #statusBlock {
+            font-weight: 700;
+        }
+        
+        .side-menu a:link,
+        .side-menu a:visited {
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            -webkit-transition: border-bottom 0.2s;
+            transition: border-bottom 0.2s;
+            color: #bc0a0f;
+            text-transform: capitalize;
+        }
+        
+        .side-menu h5 a:hover {
+            color: #730609;
+            text-decoration: underline;
+        }
+        
+        .modal-button {
+            margin-bottom: 0;
+        }
+        
+        .bigger-side-menu {
+            text-transform: uppercase;
+            background-image: url('https://teamrubiconusa.csod.com/clientimg/teamrubiconusa/welcome/2017.08.29_ShallowDraft_JACKSON_154.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            display: -ms-gsrid;
+            display: -ms-grid;
+            display: grid;
+        }
+        
+        .bigger-side-menu h1 {
+            color: white;
+            position: absolute;
+            background-color: rgba(80, 80, 80, 0.88);
+            min-height: 15vh;
+            max-width: 300px;
+            padding: 15px;
+            margin: 45px;
+            margin-top: 20vh;
+        }
+        /*-----------*/
+        /*Footer*/
+        /*-----------*/
+        
+        footer {
+            margin-top: 5vh;
+            margin-left: 0px;
+            margin-right: 13.2%;
+        }
+        
+        footer.container {
+            width: 100%;
+            padding-right: 0;
+        }
+        
+        .footer-row {
+            background: #343434;
+            padding: 5vh;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer ul li {
+            color: white;
+            font-size: 120%;
+        }
+        
+        .operations-button {
+            text-transform: uppercase;
+            font-size: 140%;
+            white-space: normal !important;
+            background: #bc0a0f;
+            border-color: #bc0a0f;
+            color: white;
+            border-radius: 0;
+            position: fixed;
+            bottom: 0;
+            left: auto;
+            width: 40vh;
+            z-index: 9999;
+            height: 45px;
+        }
+        
+        .operations-button:hover,
+        .operations-button:visited {
+            background: #003c58;
+            border: #003c58;
+            color: #fff;
+        }
+        
+        .btn.operations-button:focus {
+            color: #bc0a0f;
+        }
+        /**-----**/
+        /**Modal**/
+        /**-----**/
+        
+        .modal-content {
+            border-radius: 0;
+            top: 15vh;
+            text-align: center;
+        }
+        
+        .modal-header {
+            border-bottom: 0px;
+        }
+        
+        .modal-title {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        button.close {
+            color: #000;
+            text-shadow: 0 1px 0 #000;
+            opacity: 1;
+        }
+        
+        .modal-body {
+            position: relative;
+            padding: 15px;
+            max-height: 300px;
+            text-align: center;
+        }
+        /* .modal-body a {
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            -webkit-transition: border-bottom 0.2s;
+            transition: border-bottom 0.2s;
+            color: #bc0a0f;
+        }
+        
+        .modal-body a:hover {
+            color: #730609;
+            text-decoration: underline;
+        }*/
+        
+        .btn-light-grey {
+            color: #111;
+            background: #f8f9fa;
+            text-transform: uppercase;
+            padding: 12px 22px;
+            border: 1px solid #111;
+            border-radius: 0px;
+            margin-left: 5vh;
+            text-align: center;
+            font-weight: 700;
+            min-width: 30vh;
+            height: 46px;
+            transition: all .15s ease-in-out;
+        }
+        
+        .btn-light-grey:hover {
+            background: #e2e6ea;
+            color: #111;
+        }
+        
+        @media only screen and (min-device-width: 266px) and (max-device-width: 768px) {
+            .modal-body {
+                position: relative;
+                padding: 15px;
+                max-height: 300px;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .bigger-side-menu {
+                margin-top: 15px;
+            }
+        }
+        
+        @media only screen and (max-width: 450px) {
+            .btn-light-grey {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 side-menu">
+                <div class="container-fluid side-menu-box">
+                    <h3>Team Rubicon Profile</h3>
+                    <br>
+                    <h4><strong>{FIRSTNAME} {LASTNAME}</strong></h4>
+                    <p>{TR.ID.NUMBER} </p>
+                    <p id="tr_id_state"><span id="stateBlock"> {home.state.dropdn}</span></p>
+                    <p id="tr_id_state"><span id="regionBlock">{home.state.dropdn}</span> </p>
+                    <p style="margin-bottom:50px;" id="tr_id_status">Background Check: <span id="statusBlock">{bcs}</span></p>
+                    <h5><a href="https://teamrubiconusa.csod.com/phnx/driver.aspx?routename=Social/UniversalProfile/Transcript">View Transcript &gt;</a></h5>
+                    <h5><a href="https://teamrubiconusa.csod.com/phnx/driver.aspx?routename=Social/UniversalProfile/Bio">View Complete Profile &gt;</a></h5>
+                    <h5><a href="https://teamrubiconusa.csod.com/catalog/Prefs.aspx">Update your Profile &gt;</a></h5></div>
+                <a href="https://teamrubiconusa-pilot.csod.com/catalog/CustomPage.aspx?id=20000535">
+                    <button type="button" class="btn btn-block grey-button">Inside TR</button>
+                </a>
+                <a href="https://teamrubiconusa-pilot.csod.com/catalog/CustomPage.aspx?id=20000531">
+                    <button type="button" class="btn btn-block grey-button">Inside an Operation</button>
+                </a>
+                <button type="button" class="btn btn-block grey-button modal-button" data-toggle="modal" data-target="#Operations">Get Involved</button>
+                <div class="modal fade" id="Operations" role="dialog" tabindex="-1" aria-labelledby="costumModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h3 class="modal-title">Operations and Events</h3> </div>
+                            <div class="modal-body">
+                                <h4 style="text-align:justify;">Check out where TR is currently operating or browse for an event.</h4>
+                                <br>&nbsp;
+                                <br>
+                                <div class="button-center">
+                                    <a href="https://teamrubiconusa.org/operations/" target="_blank">
+                                        <button class="btn btn-red">Current Operations</button>
+                                    </a>
+                                    <a href="https://teamrubiconusa.csod.com/LMS/catalog/EventsCalendar.aspx" target="_blank">
+                                        <button class="btn btn-light-grey">Event Calendar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000163&amp;tab_page_id=20000163">
+                    <button type="button" class="btn btn-block grey-button">Need Help?</button>
+                </a>
+            </div>
+            <div class="col-sm-7">
+                <div class="container-fluid bigger-side-menu">
+                    <h1>Becoming a Greyshirt<a href="https://teamrubiconusa-pilot.csod.com/catalog/CustomPage.aspx?id=20000534"><button type="button" class="btn btn-block btn-red" style="margin-top:2vh">Start Here</button></a></h1> </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container-fluid">
+        <div class="col-sm-9"></div>
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-block operations-button" data-toggle="modal" data-target="#Operations">Operations</button>
+        </div>
+        <div class="modal fade" id="Operations" role="dialog" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3 class="modal-title">Operations and Events</h3> </div>
+                    <div class="modal-body">
+                        <h4 style="text-align:justify;">Check out where TR is currently operating or browse for an event.</h4>
+                        <br> 
+                        <br>
+                        <div class="button-center">
+                            <button class="btn btn-red">Current Operations</button>
+                            <button class="btn btn-light-grey">Event Calendar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <footer class="container">
+        <div class="row footer-row">
+            <div class="col-sm-3"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_RollCall_logo.png"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_divider.png"></div>
+            <div class="col-sm-4">
+                <h5><a href="https://teamrubiconusa.org/operations/">Operations Map</a></h5>
+                <h5><a href="https://teamrubiconusa.org/open/">Open Initiative</a></h5>
+                <h5><a href="https://training.fema.gov/is/courseoverview.aspx?code=IS-100.b">ICS 100</a> <a href="https://training.fema.gov/is/courseoverview.aspx?code=IS-700.a">ICS 700</a></h5>
+                <h5><a href="https://vimeo.com/channels/rollcall/108473251">External Training Upload</a></h5> </div>
+            <div class="col-sm-5">
+                <table align="right">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: right; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_TR_logo.png"> </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; vertical-align: middle;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_fb.png" border="0" usemap="#rade_img_map_1451939775978"> </td>
+                                            <td style="text-align: center; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_TW.png" border="0" usemap="#rade_img_map_1451939797543"> </td>
+                                            <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_IN.png" border="0" usemap="#rade_img_map_1451939817661"></td>
+                                            <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_YT.png" border="0" usemap="#rade_img_map_1451939843089"></td>
+                                            <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_G+.png" border="0" usemap="#rade_img_map_1451939866814"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <map name="rade_img_map_1451939775978" id="rade_img_map_1451939775978">
+                    <area href="https://www.facebook.com/teamrubicon" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939797543" id="rade_img_map_1451939797543">
+                    <area href="https://twitter.com/teamrubicon" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939817661" id="rade_img_map_1451939817661">
+                    <area href="https://www.linkedin.com/company/team-rubicon-inc-" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939843089" id="rade_img_map_1451939843089">
+                    <area href="https://www.youtube.com/user/teamrubiconusa" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939866814" id="rade_img_map_1451939866814">
+                    <area href="https://plus.google.com/+TeamrubiconusaOrg" shape="RECT" coords="0,0,43,36" target="_blank"> </map>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            var height = Math.max($(".side-menu").height(), $(".bigger-side-menu").height());
+            $(".side-menu").height(height);
+            $(".bigger-side-menu").height(height);
+            var theStatusColor = $("#statusBlock").text().replace(/\s+/g, '').toLowerCase();
+            if (theStatusColor === "cleared") {
+                $("#statusBlock").css("color", "#008000");
+            }
+            else if (theStatusColor === "new" || theStatusColor === "inprocess" || theStatusColor === "initiated" || theStatusColor === "reviewed") {
+                $("#statusBlock").css("color", "#FA9514");
+            }
+            else {
+                $("#statusBlock").css("color", "#bc0a0f");
+            }
+        });
+    </script>
+</body>
+
+</html>

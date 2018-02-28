@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <style type="text/css">
+        * {
+            font-family: "Lato", sans-serif;
+            line-height: 1.2em;
+        }
+        
+        body {
+            overflow-x: hidden;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 0 12px 0 rgba(0, 0, 0, .05), -1px 0 12px 0 rgba(0, 0, 0, .05);
+            font-size: 1.5em;
+        }
+        
+        .container-fluid {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        
+        .row {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-8 {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-bottom: 0;
+        }
+        /*****/
+        /*Header Image*/
+        /*****/
+        
+        .header-image-box {
+            background-image: url('https://teamrubiconusa.csod.com/clientimg/teamrubiconusa/welcome/2013.05.31_StartingGun_JACKSON_123.jpg');
+            height: 480px;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .header-text-box {
+            position: absolute;
+            background-color: rgba(80, 80, 80, 0.88);
+            min-height: 35vh;
+            padding: 15px;
+            margin: 45px;
+        }
+        
+        .header-text-box>h1 {
+            font-size: 4.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        .jumper:first-child {
+            margin-top: 2vh;
+        }
+        
+        .jumper {
+            text-transform: uppercase;
+            padding: 12px 22px;
+            border-radius: 0px;
+            margin-top: 1vh;
+            margin-left: auto;
+            text-align: center;
+            font-weight: 700;
+            width: 100%;
+            transition: all .15s ease-in-out;
+        }
+        
+        .small {
+            width: 50%;
+            color: #fff;
+            background: #bc0a0f;
+            border: #bc0a0f;
+            font-size: 1.1em;
+        }
+        
+        .small:hover {
+            background: #003c58;
+            border: #003c58;
+            color: #fff;
+        }
+        
+        h2 {
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+        /*****/
+        /*Icons Used*/
+        /*****/
+        
+        .glyphicon {
+            color: #bc0a0f;
+            font-size: 3em;
+        }
+        
+        .glyphicon-plus {
+            color: white;
+            float: right;
+            font-size: 2em;
+            transform: rotate(45deg);
+            clear: both;
+            cursor: pointer;
+        }
+        
+        .col-sm-3 h4 {
+            min-height: 6em;
+            margin: 16px 0;
+        }
+        
+        a {
+            color: #bc0a0f;
+        }
+        
+        a:hover {
+            color: #730609;
+            text-decoration: underline;
+        }
+        /*****/
+        /*CSS for Flipping Cards*/
+        /*****/
+        
+        .card {
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        
+        .front-content:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .flip {
+            -webkit-perspective: 800;
+            perspective: 800;
+            position: relative;
+            text-align: center;
+            height: 100%;
+            display: inline-block;
+        }
+        
+        .flip .card.flipped {
+            -webkit-transform: rotatey(180deg);
+            transform: rotatey(180deg);
+        }
+        
+        .flip .card {
+            height: 100%;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transition: 0.5s;
+            transform-style: preserve-3d;
+            transition: 0.5s;
+        }
+        
+        .flip .card .face {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            z-index: 2;
+        }
+        
+        .flip .card .front {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        .flip .card .back {
+            -webkit-transform: rotatey(180deg);
+            transform: rotatey(180deg);
+            background-color: #bc0a0f;
+            color: white;
+        }
+        
+        .flip .card .back a {
+            color: white;
+        }
+        
+        .inner {
+            margin: 0px !important;
+        }
+        
+        .front-content,
+        .back-content {
+            background-color: transparent;
+            width: 100%;
+            height: 320px;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .front-content {
+            color: #4a4a4a;
+        }
+        
+        .back-content h4 {
+            padding: 48px 16px;
+        }
+        
+        .back-content {
+            color: white;
+            margin: 48px;
+        }
+        /*-----------*/
+        /*Meta Data*/
+        /*-----------*/
+        
+        .meta-data {
+            background-color: #4a4a4a;
+            min-height: 285px;
+            color: white;
+            padding: 15px;
+        }
+        
+        .meta-data a {
+            color: white;
+        }
+        
+        .meta-data ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .meta-data h4 {
+            line-height: 2em;
+        }
+        
+        .meta-data-2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://teamrubiconusa.org/app/uploads/2017/10/20121108_SANDYNY_HERROLD_20121108_0242-e1508857844479.jpg);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            min-height: 285px;
+        }
+        
+        .meta-data .glyphicon {
+            color: white;
+        }
+        /*-----------*/
+        /*Footer*/
+        /*-----------*/
+        
+        footer {
+            margin-top: 5vh;
+            margin-left: 0px;
+            margin-right: 13.2%;
+            text-align: left;
+        }
+        
+        .footer-row {
+            background: #343434;
+            padding: 5vh;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer ul li {
+            color: white;
+            font-size: 120%;
+        }
+        
+        footer h5>a {
+            color: rgb(225, 171, 82);
+        }
+        
+        footer h5>a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer .link-section {
+            text-align: left !important;
+        }
+        
+        footer.container-fluid {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header-image-box">
+            <div class="col-sm-5">
+                <div class="header-text-box">
+                    <h1>STEP INTO THE ARENA</h1>
+                    <!--    <a href="https://teamrubiconusa.csod.com/ats/careersite/JobDetails.aspx?site=6&id=24">
+                        <button type="button" class="jumper small">Apply now</button>
+                    </a> --></div>
+            </div>
+        </div>
+        <!--Flip Cards section-->
+        <div class="row text-center">
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card card-body  ">
+                        <div class="face front">
+                            <div class="front-content inner"><span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Membership</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4>Membership physically, mentally, and emotionally prepare them for deployments through socials, training, and projects</h4>
+                                <!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card card-body">
+                        <div class="face front">
+                            <div class="front-content inner"><span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Coordinator</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4><a href="https://teamrubiconusa.box.com/s/gs0rqmeu28z4zcqban5de78w8xp238wv">City Leaders</a> are planning events, coordinating with local NGOs, and building a base group of members in their area for future operations.</h4>
+                                <!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card card-body">
+                        <div class="face front">
+                            <div class="front-content inner"><span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Finance</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4>Regional Finance is at the front lines of financial support for an evolving and dynamic first -response organization. We need leaders within the regions to cultivate relationships, represent national finance, and assist volunteer members across the country.</h4>
+                                <!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card card-body">
+                        <div class="face front">
+                            <div class="front-content inner"> <span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Operations</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4>Regional Operations work hand in hand with their Regional Planning counterparts to ensure that when disaster strikes, we can quickly respond with the proper equipment and trained personnel to get the job done right.</h4>
+                                <!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card">
+                        <div class="face front">
+                            <div class="front-content inner"><span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Planning</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4>Regional Planning leaders are the brains behind the operations and are always thinking two steps ahead about what can be done to better prepare our volunteers for deployments. They live and breathe data mining and quickly target areas we can quickly move in and assist.<!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card">
+                        <div class="face front">
+                            <div class="front-content inner"><span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Wellness</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4>Disaster relief is inherently stressful. Regional Wellness guides and enhances the Greyshirt experience by ensuring our teammates are ready to deploy and stable upon return. Our mission has an element of continued wellness for our volunteers, which makes your role imperative for TR.</h4>
+                                <!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card">
+                        <div class="face front">
+                            <div class="front-content inner"><span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Communications</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4>Communications lead the “story-yelling” efforts for Team Rubicon and help maintain the integrity of the brand. RCMs lead the charge in recruiting members and expanding awareness. RCMs gather content from the field, tell the evolving story of TR, and empower their fellow Greyshirts.</h4>
+                                <!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip">
+                    <div class="card">
+                        <div class="face front">
+                            <div class="front-content inner"><span class="glyphicon glyphicon-question-sign"></span>
+                                <h4> Mobilization</h4><a href="#">Learn More &gt;</a></div>
+                        </div>
+                        <div class="face back">
+                            <div class="back-content inner"><span class="glyphicon glyphicon-plus"></span>
+                                <h4>Mobilization  guides and enhances the Greyshirt experience by notifiying and dispatching kick-ass response teams.</h4>
+                                <!-- I just realized I'll need this links later <a href="https://www.google.com/">click here</a>--></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="meta-data">
+                    <div class="text-center meta-data-1"><span class="glyphicon glyphicon-question-sign"></span>
+                        <h4>Other Opportunities</h4>
+                        <p>Have more time. Up your commitment and apply for a role below:</p>
+                        <!-- See if we can center this list -->
+                        <ul>
+                            <li>
+                                <h5><a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000495">Incident Management Team</a> </h5></li>
+                            <li>
+                                <h5><a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000494">Clay Hunt Fellows Program</a> </h5></li>
+                            <li>
+                                <h5><a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000484&amp;tab_page_id=20000484">International Response Team</a></h5></li>
+                            <li>
+                                <h5><a href="#">Contracted Instructor</a></h5></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="meta-data  meta-data-2">
+                    <div class="text-center"><span class="glyphicon glyphicon-question-sign"></span>
+                        <h4>Team Rubicon Careers</h4>
+                        <p>Our goal is to become the best disaster relief organization in the world and we’re well on our way. Do you have what it takes to join us?</p>
+                        <a href="https://teamrubiconusa.org/careers/">
+                            <button type="button" class="jumper small">Apply now</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid">
+            <div class="row footer-row">
+                <div class="col-sm-3"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_RollCall_logo.png"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_divider.png"></div>
+                <div class="col-sm-4 link-section">
+                    <h5><a href="/catalog/CustomPage.aspx?id=20000481">Ready to Deploy? Start here </a></h5>
+                    <h5><a href="/phnx/driver.aspx?routename=Social/UniversalProfile/Bio">My Profile</a></h5>
+                    <h5><a href="/GlobalSearch/search.aspx?s=&amp;q=#q=&amp;s=1&amp;f=0&amp;a=">Online Learning</a></h5>
+                    <h5><a href="/LMS/catalog/EventsCalendar.aspx?tab_page_id=-10#m=2">In Person Training &amp; Events</a></h5> </div>
+                <div class="col-sm-5">
+                    <table align="right">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: right; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_TR_logo.png"> </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; vertical-align: middle;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_fb.png" border="0" usemap="#rade_img_map_1451939775978"> </td>
+                                                <td style="text-align: center; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_TW.png" border="0" usemap="#rade_img_map_1451939797543"> </td>
+                                                <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_IN.png" border="0" usemap="#rade_img_map_1451939817661"></td>
+                                                <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_YT.png" border="0" usemap="#rade_img_map_1451939843089"></td>
+                                                <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_G+.png" border="0" usemap="#rade_img_map_1451939866814"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <map name="rade_img_map_1451939775978" id="rade_img_map_1451939775978">
+                        <area href="https://www.facebook.com/teamrubicon" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                    <map name="rade_img_map_1451939797543" id="rade_img_map_1451939797543">
+                        <area href="https://twitter.com/teamrubicon" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                    <map name="rade_img_map_1451939817661" id="rade_img_map_1451939817661">
+                        <area href="https://www.linkedin.com/company/team-rubicon-inc-" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                    <map name="rade_img_map_1451939843089" id="rade_img_map_1451939843089">
+                        <area href="https://www.youtube.com/user/teamrubiconusa" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                    <map name="rade_img_map_1451939866814" id="rade_img_map_1451939866814">
+                        <area href="https://plus.google.com/+TeamrubiconusaOrg" shape="RECT" coords="0,0,43,36" target="_blank"> </map>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        $('.flip').click(function () {
+            $(this).find('.card').toggleClass('flipped');
+        });
+        $(function () {
+            $('.face back').matchHeight();
+        });
+    </script>
+</body>
+
+</html>

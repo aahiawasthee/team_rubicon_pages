@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <style type="text/css">
+        * {
+            font-family: "Lato", sans-serif;
+            line-height: 1.2em;
+        }
+        
+        body {
+            overflow-x: hidden;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 0 12px 0 rgba(0, 0, 0, .05), -1px 0 12px 0 rgba(0, 0, 0, .05);
+        }
+        
+        .row {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+        
+        .container-fluid {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-8 {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-bottom: 0;
+        }
+        /*****/
+        /*Header Image*/
+        /*****/
+        
+        .header-image-box {
+            background-image: url('https://teamrubiconusa.csod.com/clientimg/teamrubiconusa/welcome/2013.05.31_StartingGun_JACKSON_123.jpg');
+            height: 420px;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .header-text-box {
+            position: absolute;
+            background-color: rgba(80, 80, 80, 0.88);
+            min-height: 35vh;
+            padding: 15px;
+            margin: 45px;
+        }
+        
+        .header-text-box>h1 {
+            font-size: 4.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        .jumper {
+            text-transform: uppercase;
+            padding: 12px 22px;
+            border-radius: 0px;
+            margin-top: 1vh;
+            margin-left: auto;
+            text-align: center;
+            font-weight: 700;
+            width: 100%;
+            transition: all .15s ease-in-out;
+        }
+        
+        .small {
+            width: 50%;
+            color: #fff;
+            background: #bc0a0f;
+            border: #bc0a0f;
+            font-size: 1.1em;
+        }
+        
+        .small:hover {
+            background: #003c58;
+            border: #003c58;
+            color: #fff;
+        }
+        /**---------**/
+        /**Common Column Changes**/
+        /**-----------**/
+        
+        .third-section {
+            text-align: center;
+            color: white;
+        }
+        
+        .grey-col,
+        .image-col-1,
+        .image-col-2 {
+            padding: 15px;
+            min-height: 320px;
+        }
+        
+        .second-section p,
+        .third-section h4 {
+            padding: 0px 32px 112px 32px;
+        }
+        
+        .third-section a {
+            color: white;
+            line-height: 23px;
+        }
+        
+        .grey-col .glyphicon {
+            color: white;
+        }
+        /**---------**/
+        /**Grey Col**/
+        /**-------**/
+        
+        .grey-col {
+            background-color: #272c33;
+        }
+        
+        .glyphicon {
+            color: white;
+            font-size: 4em;
+            text-align: center;
+        }
+        
+        .image-col-1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://teamrubiconusa.org/app/uploads/2017/11/2A9A2800.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            background-size: cover;
+        }
+        
+        .image-col-2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://teamrubiconusa.org/app/uploads/2017/10/20121108_SANDYNY_HERROLD_20121108_0242-e1508857844479.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            background-size: cover;
+        }
+        
+        .second-section {
+            margin: 45px auto;
+            text-align: center;
+        }
+        
+        .card-red,
+        .card-white {
+            width: 90%;
+            min-height: 420px;
+            box-shadow: 1px 0 12px 0 rgba(0, 0, 0, .05), -1px 0 12px 0 rgba(0, 0, 0, .05);
+            padding: 15px 32px 32px 32px;
+            font-size: 120%;
+        }
+        
+        .card-red h3,
+        .card-white h3 {
+            text-transform: uppercase;
+        }
+        
+        .card-red {
+            background-color: #bc0a0f;
+            float: right;
+            color: white;
+        }
+        
+        .card-red h4,
+        .card-red a {
+            text-transform: uppercase;
+            color: white;
+        }
+        
+        .card-white {
+            color: #4a4a4a;
+        }
+        
+        .card-white h4,
+        .card-white a {
+            color: #bc0a0f;
+            text-transform: uppercase;
+        }
+        
+        .card-white .glyphicon {
+            color: #bc0a0f;
+        }
+        /*-----------*/
+        /*Footer*/
+        /*-----------*/
+        
+        footer {
+            margin-top: 5vh;
+            margin-left: 0px;
+            margin-right: 13.2%;
+            text-align: left;
+        }
+        
+        .footer-row {
+            background: #343434;
+            padding: 5vh;
+        }
+        
+        footer ul {
+            list-style: none;
+        }
+        
+        footer ul li {
+            color: white;
+            font-size: 120%;
+        }
+        
+        footer h5>a {
+            color: rgb(225, 171, 82);
+        }
+        
+        footer h5>a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        footer .link-section {
+            text-align: left !important;
+        }
+        
+        footer.container-fluid {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header-image-box">
+            <div class="col-sm-5">
+                <div class="header-text-box">
+                    <h1>Inside Team Rubicon</h1>
+                    <!--  <a href="">
+                        <button type="button" class="jumper small">Annual Report</button>
+                    </a> --></div>
+            </div>
+        </div>
+        <div class="container-fluid second-section">
+            <div class="col-sm-6">
+                <div class="card-red"> <span class="glyphicon glyphicon-question-sign"></span>
+                    <h4>SOGs, POLICY, DOCTRINE</h4>
+                    <h3>From planning to packing</h3>
+                    <p>Read our planning doctrine, learn our harassment policy, and check out the latest packing list</p><a href="#">Learn More &gt;</a></div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card-white"> <span class="glyphicon glyphicon-question-sign"></span>
+                    <h4>STEP INTO THE ARENA</h4>
+                    <h3>Become a volunteer leader</h3>
+                    <p>Plan ops, go on recon, or reconcile finance. Take charge of your community.</p><a href="#">Join the team &gt;</a></div>
+            </div>
+        </div>
+        <div class="container-fluid third-section">
+            <div class="col-md-4 grey-col"> <span class="glyphicon glyphicon-question-sign"></span>
+                <h4>Event Calendar</h4> <a href="https://teamrubiconusa.csod.com/LMS/catalog/EventsCalendar.aspx">Browse Here &gt; </a></div>
+            <div class="col-md-4 image-col-1"> <span class="glyphicon glyphicon-question-sign"></span>
+                <h4>Search for an Event</h4> <a href="https://teamrubiconusa.csod.com/ui/lms-learner-home/">Search &gt;</a> </div>
+            <div class="col-md-4 image-col-2"> <span class="glyphicon glyphicon-question-sign"></span>
+                <h4>Unknown Video</h4><a href="#">Watch Now &gt;</a> </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div class="row footer-row">
+            <div class="col-sm-3"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_RollCall_logo.png"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_divider.png"></div>
+            <div class="col-sm-4 link-section">
+                <h5><a href="/catalog/CustomPage.aspx?id=20000481">Ready to Deploy? Start here </a></h5>
+                <h5><a href="/phnx/driver.aspx?routename=Social/UniversalProfile/Bio">My Profile</a></h5>
+                <h5><a href="/GlobalSearch/search.aspx?s=&amp;q=#q=&amp;s=1&amp;f=0&amp;a=">Online Learning</a></h5>
+                <h5><a href="/LMS/catalog/EventsCalendar.aspx?tab_page_id=-10#m=2">In Person Training &amp; Events</a></h5> </div>
+            <div class="col-sm-5">
+                <table align="right">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: right; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_TR_logo.png"> </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; vertical-align: middle;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_fb.png" border="0" usemap="#rade_img_map_1451939775978"> </td>
+                                            <td style="text-align: center; vertical-align: middle;"><img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_TW.png" border="0" usemap="#rade_img_map_1451939797543"> </td>
+                                            <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_IN.png" border="0" usemap="#rade_img_map_1451939817661"></td>
+                                            <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_YT.png" border="0" usemap="#rade_img_map_1451939843089"></td>
+                                            <td style="text-align: center; vertical-align: middle;"> <img alt="" src="/clientimg/teamrubiconUSA/welcome/Footer_G+.png" border="0" usemap="#rade_img_map_1451939866814"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <map name="rade_img_map_1451939775978" id="rade_img_map_1451939775978">
+                    <area href="https://www.facebook.com/teamrubicon" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939797543" id="rade_img_map_1451939797543">
+                    <area href="https://twitter.com/teamrubicon" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939817661" id="rade_img_map_1451939817661">
+                    <area href="https://www.linkedin.com/company/team-rubicon-inc-" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939843089" id="rade_img_map_1451939843089">
+                    <area href="https://www.youtube.com/user/teamrubiconusa" shape="RECT" coords="0,0,42,36" target="_blank"> </map>
+                <map name="rade_img_map_1451939866814" id="rade_img_map_1451939866814">
+                    <area href="https://plus.google.com/+TeamrubiconusaOrg" shape="RECT" coords="0,0,43,36" target="_blank"> </map>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

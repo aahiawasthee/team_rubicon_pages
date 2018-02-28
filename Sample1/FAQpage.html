@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style type="text/css">
+        * {
+            font-family: "Lato", sans-serif;
+            line-height: 1.2em;
+            color: #4a4a4a;
+            text-align: left;
+        }
+        
+        body {
+            overflow-x: hidden;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 0 12px 0 rgba(0, 0, 0, .05), -1px 0 12px 0 rgba(0, 0, 0, .05);
+        }
+        
+        .container-fluid {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        
+        hr {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border-top: 4px solid maroon;
+        }
+        
+        a {
+            color: #bc0a0f;
+        }
+        
+        a:hover {
+            color: #003c58;
+            text-decoration-color: #003c58;
+        }
+        
+        .faq-box {
+            background-image: url('http://www.smartgirlpolitics.com/wp-content/uploads/2017/01/2013-11-19_seabird_ryan_0089-1900x700_c.jpg');
+            height: 45vh;
+            background-size: auto;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+        
+        .faq-text-box {
+            position: absolute;
+        }
+        
+        .faq-box h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            background-color: rgba(80, 80, 80, 0.88);
+            font-weight: 700;
+            margin-top: 5vh;
+            min-height: 35vh;
+            padding: 15px;
+        }
+        
+        h2 {
+            text-transform: uppercase;
+            font-size: 3.5rem;
+        }
+        
+        .jumper:first-child {
+            margin-top: 2vh;
+        }
+        
+        .jumper {
+            color: #111;
+            background: #f8f9fa;
+            text-transform: uppercase;
+            padding: 12px 22px;
+            border: 1px solid #111;
+            border-radius: 0px;
+            margin-top: 1vh;
+            margin-left: auto;
+            text-align: center;
+            font-weight: 700;
+            width: 100%;
+            transition: all .15s ease-in-out;
+        }
+        
+        .small {
+            width: 50%;
+            color: #fff;
+            background: #bc0a0f;
+            border: #bc0a0f;
+        }
+        
+        .jumper:hover {
+            background: #e2e6ea;
+            color: #111;
+        }
+        
+        .small:hover {
+            background: #003c58;
+            border: #003c58;
+            color: #fff;
+        }
+        
+        .card:first-child {
+            margin-top: 3vh;
+        }
+        
+        ul {
+            font-size: 1.2em;
+            list-style: none;
+            padding-left: 0px;
+        }
+        
+        span {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .questions .social {
+            margin-top: 0px;
+            padding-left: 0px;
+        }
+        
+        .questions .social li {
+            margin-top: 0px;
+            font-size: 0.8em;
+            padding-left: 0px;
+        }
+        
+        .questions li {
+            margin-top: 15px;
+        }
+        
+        .questions .sub-points {
+            list-style: circle;
+            margin-top: 0px;
+            font-size: 1em;
+            padding-left: 20px;
+        }
+        
+        .questions .sub-points li {
+            margin-top: 5px;
+        }
+        
+        @media (min-width: 992px) {
+            #left {
+                position: sticky;
+                top: -1.25vh
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class=" faq-box">
+            <div class="col-sm-4">
+                <div class="faq-text-box">
+                    <h1>Frequently Asked Questions</h1> </div>
+            </div>
+        </div>
+        <br>
+        <!-- nav buttons-->
+        <div class="col-sm-3" id="left">
+            <a href="#indexGeneral">
+                <button type="button" class="jumper">General Questions</button>
+            </a>
+            <br>
+            <a href="#indexOperations">
+                <button type="button" class="jumper">Operations Questions</button>
+            </a>
+            <a href="#indexEvents">
+                <button type="button" class="jumper">Events Questions</button>
+            </a>
+            <a href="#indexBGCheck">
+                <button type="button" class="jumper">Background Check Questions</button>
+            </a>
+            <a href="#indexTechnology">
+                <button type="button" class="jumper">Technology Questions</button>
+            </a>
+            <a href="#indexOther">
+                <button type="button" class="jumper">Other Questions</button>
+            </a>
+        </div>
+        <div class="col-sm-9">
+            <!--General Questions-->
+            <div class="col-md-12">
+                <h2 id="indexGeneral">General Questions</h2></div>
+            <div class="col-md-12">
+                <ul class="questions">
+                    <li><span>Do I have to be a veteran to be a member of Team Rubicon?</span>
+                        <br>No! Team Rubicon accepts members from all walks of life and does not discriminate on the basis of race, color, religion, creed, sex, sexual orientation, gender identity, national origin, ancestry, age, veteran status, disability, genetic information, military service, or other protected status. Military veteran or kick-ass civilian, we’ll get you ready to hit the field and take disaster by storm.</li>
+                    <li><span>How do I find out what’s happening with Team Rubicon, both nationally and locally?</span>
+                        <br>Get more info by following us on social media or joining our newsletters by adding your email at the bottom of our <a href="https://teamrubiconusa.org/">home page</a>. You can also find out more about our historical and current operations at <a href="https://teamrubiconusa.org/operations/">teamrubiconusa.org/responses</a>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/teamrubicon/" target="_blank">Facebook</a></li>
+                            <li><a href="https://twitter.com/TeamRubicon" target="_blank">Twitter</a></li>
+                            <li> <a href="https://www.instagram.com/teamrubicon" target="_blank">Instagram</a></li>
+                            <li> <a href="mailto:https://www.youtube.com/user/teamrubiconusa" target="_blank">YouTube</a> </li>
+                        </ul>
+                    </li>
+                    <li><span>How is TR funded?</span>
+                        <br>Team Rubicon is a registered 501(c)(3) organization that relies on donations to support our mission. Our top three funding sources are: foundation/trusts, business/corporations, and individuals. For the most up to date information, check out our <a href="https://teamrubiconusa.org/financials/" target="_blank">financial reports.</a> </li>
+                    <li><span>How do I apply to work for Team Rubicon?</span>
+                        <br>Find current employment opportunities listed on our <a href="https://teamrubiconusa.org/careers/" target="_blank">careers page</a> </li>
+                    <li><span>Besides employment and volunteering, what other opportunities are there?</span>
+                        <br>Apply to be a part of our <a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000494">Clay Hunt Fellows Program</a> or become a op mentor and join the <a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000495">IMT</a>. </li>
+                </ul>
+            </div>
+            <!--Operation Questions-->
+            <div class="col-md-12">
+                <h2 id="indexOperations">Operations Questions</h2></div>
+            <div class="col-md-12">
+                <ul class="questions">
+                    <li><span>I’ve signed up, what else do I need to do in order to deploy?</span>
+                        <br>In order to deploy, members must have completed the following:
+                        <ul class="social">
+                            <li>- <a href="#">Module 1</a></li>
+                            <li>- <a href="#">ICS 100 &amp; 700</a></li>
+                            <li>- <a href="#">TR background check</a></li>
+                            <li>- <a href="#">Updated Deployment Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Do I need health insurance to deploy?</span>
+                        <br>Yes, Team Rubicon requires Greyshirts to have health insurance given the inherently dangerous nature of disaster response operations. All operations (mitigation, response, recovery), projects, and training events require our members to maintain coverage in the event of personal injury. In order to take care of others on their worst day, our members need to take care of themselves first. If you are covered by VA Health Benefits, you're covered and can still deploy.</li>
+                    <li><span>How does Team Rubicon decide when to conduct an operation? How does planning begin?</span>
+                        <br>Disaster response resources can be found <a href="https://teamrubiconusa.org/doctrine/">here</a>. You can also watch our video regarding the <a href="https://vimeo.com/140876334">Concept of Operations</a>. </li>
+                    <li><span>How do I start signing up for operations? How will I be notified? Why haven’t I received any information in the past?</span>
+                        <br>When an operation is approved, a notification will be sent out to members within a 450-mile radius of the incident (so make sure your address and region are accurate in your profile). For larger operations (Type 1-3), TR will purchase flights to the operation for vetted members. For all flight ops, members must be available for 8 days on scene. If you are not receiving the notifications:
+                        <ul class="sub-points">
+                            <li>Ensure your email address and mobile number are up to date in <a href="https://teamrubiconusa.csod.com/client/teamrubiconusa/default.aspx?ReturnUrl=https%3a%2f%2fteamrubiconusa.csod.com%2fcatalog%2fPrefs.aspx">Roll Call</a></li>
+                            <li>Check your spam filters aren’t catching emails from <a href="mailto:noreply@teamrubiconusa.org">noreply@teamrubiconusa.org</a></li>
+                            <li>Check that you have not unsubscribed from TR emails.</li>
+                            <li>Click to re-subscribe to TR emails here.</li>
+                        </ul>
+                    </li>
+                    <li><span>How do I know I have selected for an operation?</span>
+                        <br>You will receive a set of dispatch instructions from our Membership team. Members are selected based on the proximity, availability, and personal readiness of our badass volunteers. <a href="https://teamrubiconusa.org/blog/what-it-takes-to-deploy-domestically/">Read more about domestic deployment here. </a></li>
+                    <li><span>How much will it cost me to deploy?</span>
+                        <br>In short, all you donate is your time, sweat, and willingness to help others. <a href="https://teamrubiconusa.app.box.com/files/0/f/21964245075/1/f_149508104787">TR will offset mileage</a> and/or flights, lodging, food and drinks during your deployment. TR will also provide the necessary equipment and supplies, but asks that volunteers bring their own <a href="http://www">personal gear.</a></li>
+                    <li><span>The dispatch instructions don’t tell me enough, how can I find out more about my deployment?</span>
+                        <br>The onsite POC listed on your dispatch instructions can help provide more op specific information once you check in with them to confirm your arrival time. General questions about what to expect on deployment can be answered by the leader who dispatched you. </li>
+                    <li><span>Does TR offer additional training besides Module 1 and Pre-Deployment Basic?</span>
+                        <br> Definitely! Check out our Training page, search for something on our Basic Training page, or check out the follow events for a session near you!*
+                        <ul class="social">
+                            <li>- <a href="https://teamrubiconusa.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=d75b2514-d870-4ae7-9f8f-2dd3ede7d693#t=3"> Chainsaw Operations 1</a></li>
+                            <li>- <a href="https://teamrubiconusa.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=e6920875-1e61-42d6-94e5-4fb9797f035f#t=3">Heavy Equipment Operations 1</a></li>
+                            <li>- <a href="https://teamrubiconusa.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=971ce703-1773-4234-a632-65273a10e162#t=3"> ICS-300: Intermediate ICS for Expanding Incidents</a></li>
+                            <li>- <a href="https://teamrubiconusa.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=f953c013-a99d-42ae-8595-1505c35e70e9#t=3">ICS-400: Advanced ICS for Command and General Staff, Complex Incidents, and MACS</a></li>
+                            <li>- <a href="https://teamrubiconusa.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=df2d518b-8016-4b50-b701-da2ee059b373#t=3">Command and Control</a></li>
+                            <li>- <a href="https://teamrubiconusa.csod.com/LMS/LoDetails/DetailsLo.aspx?loid=04b4331a-df94-4152-9182-8130938c288c#t=3">Applied Suicide Intervention Skills Training</a></li>
+                        </ul>*Many courses will have prerequisites, including online courses and/or lead referrals</li>
+                    <li><span>I didn’t get selected for deployment and I don’t want to stand by. I’m on my way to the site.</span>
+                        <br>Do not self-deploy under any circumstance. We know you're eager get to the field cause we're built the same way: wanting to help those who need it most. To deploy, knock out the deployment requirements and register your availability. If you raise your hand to help, we'll dispatch you via email.
+                        <br> <strong>Self-deployment can be reason for suspension or removal from the organization</strong> </li>
+                    <li><span>How do I deploy internationally? </span>
+                        <br>Anyone interested in deploying internationally must apply to the <a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000484&amp;tab_page_id=20000484">International Response Team</a>. Please refer to the International Response Team page for more details and to apply. </li>
+                </ul>
+            </div>
+            <!--Events Questions-->
+            <div class="col-md-12">
+                <h2 id="indexEvents">Events Questions</h2></div>
+            <div class="col-md-12">
+                <ul class="questions">
+                    <li><span>I uploaded all my certs, updated my deployment profile, and completed Module – what now?</span>
+                        <br> Take a look through our<a href="https://teamrubiconusa.csod.com/LMS/catalog/EventsCalendar.aspx?tab_page_id=-10#m=2&amp;d=11/15/2017"> Event Calendar</a> or search for something that interests you on our <a href="https://teamrubiconusa.csod.com/ui/lms-learner-home/home">Basic Training page</a>.</li>
+                    <li><span>How do I know if I am registered for an event?</span>
+                        <br>Get more info by following us on social media or joining our newsletters by adding your email at the bottom of our<a href="https://teamrubiconusa.org/"> home page</a>. You can also find out more about our historical and current operations at <a href="https://teamrubiconusa.org/operations/">teamrubiconusa.org/responses</a>
+                        <ul class="social">
+                            <li>Under the ‘Events/Field Ops/Training’ tab in Roll Call and select <a href="https://teamrubiconusa.csod.com/phnx/driver.aspx?routename=Social/UniversalProfile/Transcript" target="_blank">‘View Your Transcript’</a></li>
+                            <li>Events/training you’ve registered for (but haven’t completed) will be visible.</li>
+                            <li> Select the tab under your name that says ‘Completed’ to view a completed event/training.</li>
+                        </ul>
+                    </li>
+                    <li><span>I attended an event but isn’t showing as complete on my transcript, what do I do?</span>
+                        <br> Training is approved 72 to 96 hours after the event is completed. If it is still not approved, contact the event’s point of contact (found under session details). Incident Command System (ICS)</li>
+                    <li><span>Can I upload ICS certificates from previous coursework?
+</span>
+                        <br>Yes! We currently accept the following ICS certificates: ICS 100, 200, 700, 800, 300, 400 and 449. </li>
+                    <li><span>How do I upload my certificates and other external training?</span>
+                        <br>
+                        <ol>
+                            <li>Save your certificates to your computer as .pdf files;</li>
+                            <li>navigate to your <a href="https://teamrubiconusa.csod.com/phnx/driver.aspx?routename=Social/UniversalProfile/Transcript&amp;TargetUser=38872&amp;RESET=TRUE&amp;tab_page_id=-8">transcript in Roll Call</a> (by hovering over the ‘Events and Training’ tab</li>
+                            <li>Clicking on ‘View Your Transcript’).</li>
+                            <li>On the top right corner of the page, select ‘Options’ à ’<a href="https://teamrubiconusa.csod.com/phnx/driver.aspx?routename=Learning/ExternalTraining&amp;TargetUser=38872">Add external training</a>’.</li>
+                            <li>Fill in the name of the cert and click ‘Submit’.</li>
+                            <li>Click the black button to ‘Register’ and then again to ‘Complete’.</li>
+                            <li>Step-by-step instructions provided in <a href="https://vimeo.com/channels/rollcall/108473251">this video</a>!</li>
+                        </ol>
+                    </li>
+                    <li><span>How do I upload a certificate that isn’t in .pdf form?</span>
+                        <br>You can’t upload certificates that aren’t .pdf files, but you can convert a file to .pdf in a few quick steps!
+                        <ol>
+                            <li>Open your document and select print.</li>
+                            <li>Instead of choosing a printer, choose ‘Save as PDF’.</li>
+                            <li>Now upload your saved cert using the instructions above.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <!--BackGround Check Questions-->
+            <div class="col-md-12">
+                <h2 id="indexBGCheck">Background Check Questions</h2></div>
+            <div class="col-md-12">
+                <ul class="questions">
+                    <li><span>What is the background check vetting criteria? What will stop me from being a volunteer?</span>
+                        <br>Our background check exists to ensure a safe operating environment for our members and the communities we serve. For more information, download our <a href="https://teamrubiconusa.box.com/shared/static/aa63erbvvo7ica08fvn867v0jymt48ig.pdf">Background Check Policy</a>.</li>
+                    <li><span>Do I need a background check to deploy? Can I use my previous clearance?</span> It’s our responsibility to ensure a safe operating environment for our team members and the communities we serve.
+                        <ul class="sub-points">
+                            <li>Security clearances are not accepted in lieu of a background check.</li>
+                            <li>Even if you have completed one elsewhere, we require members to <a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000487&amp;tab_page_id=20000487">submit a TR background check</a>.</li>
+                        </ul>
+                    </li>
+                    <li><span>How do I get reimbursed for my background check?</span>
+                        <br>We’ll cover the cost of your background check. No credit card information needed and no more waiting by the mailbox for your reimbursement check! For more info, check out <a href="https://teamrubiconusa.box.com/s/m2xl7vd603x2qm3s2ub8f3ph5cz5835a">this flyer</a>.</li>
+                    <li><span>Will I be notified of the results?</span>
+                        <br>Results are kept confidential and handled on a case-to-case basis. <a href="https://teamrubiconusa.csod.com/catalog/CustomPage.aspx?id=20000487&amp;tab_page_id=20000487">Check your status</a>.</li>
+                    <li><span>My background check status is blank what do I do?</span>
+                        <br>Background check issues? Please submit a ticket to our <a href="http://help.teamrubiconusa.org/">HelpDesk</a>.</li>
+                </ul>
+            </div>
+            <!--Technology Questions-->
+            <div class="col-md-12">
+                <h2 id="indexTechnology">Technology Questions</h2></div>
+            <div class="col-md-12">
+                <ul class="questions">
+                    <li><span>What's my TR ID number and where can I find it?</span>
+                        <br> Your TR ID is your Team Rubicon fingerprint, a unique identification number assigned when you join Team Rubicon.
+                        <ul class="sub-points">
+                            <li>In Roll Call, click on your photo icon in the upper right corner.</li>
+                            <li>Your TR ID number is located in your ‘Bio’ section under ‘User ID’.</li>
+                            <li>It’s displayed on your <a href="https://teamrubiconusa.csod.com/LMS/catalog/Welcome.aspx?tab_page_id=-67&amp;tab_id=-1">homepage in Roll Call</a>.</li>
+                        </ul>
+                    </li>
+                    <li><span>I forgot my Roll Call password.</span>
+                        <br>Enter your email address (or username) <a href="https://teamrubiconusa.csod.com/ForgotPasswordAuthentication.aspx?corpName=teamrubiconusa">here</a> and you’ll receive a reset link via email. Forgot your Roll Call username / email, open a ticket on our <a href="http://help.teamrubiconusa.org/">HelpDesk</a>.</li>
+                    <li><span>I need to update my personal information (update address, emergency contact details, etc.)</span>
+                        <br>Find the right form here in order to update your profile. If your name is spelled incorrectly or you need to change your region, please open a ticket with our <a href="http://help.teamrubiconusa.org/">HelpDesk</a>.</li>
+                    <li><span>4. I can't get Module 1 (or another online course) to load / complete.</span>
+                        <br>Submit a trouble ticket through our <a href="http://help.teamrubiconusa.org/">HelpDesk</a> and we’ll endeavor to get your issue sorted.</li>
+                </ul>
+            </div>
+            <!--Other Questions -->
+            <div class="col-md-12">
+                <h2 id="indexOther">Other Questions</h2></div>
+            <div class="col-md-12">
+                <ul class="questions">
+                    <li><span>May I bring a firearm to Team Rubicon events or operations?</span>
+                        <br>No. We leave firearms, illegal knives, or any other weapon at home. I'm licensed to carry the weapon? No. I'm keeping it in my personally owned vehicle? Still no.</li>
+                    <li><span>Can I bring my service animal?</span>
+                        <br>Yes. The furrier, the merrier! Team Rubicon adheres to the Americans with Disabilities Act (ADA) and does not require any information for service animals to deploy. For more information, read our policy <a href="https://teamrubiconusa.box.com/s/xce9ak4xqm5d942uv18xai9k9j6lsdu1">here</a>.</li>
+                    <li><span>Where's my grey shirt?!</span>
+                        <br>At Team Rubicon, we earn our grey shirts. Get out to a service project or deploy on an op to step into the grey and get your hands on a grey shirt.</li>
+                    <li><span>Can I bring my kids to Team Rubicon events or operations?</span>
+                        <br>No, the heart of a disaster zone is no place for kids. Bring your above ankle work boots and hard charging spirit, and get ready to get dirty.</li>
+                    <li><span>Can I abbreviate Team Rubicon to just Rubicon?</span>
+                        <br>No way! We'll call you by your name and you call us by ours. We're proud of our name as it becomes synonymous with disaster response. More importantly, we are a team and that is our strength.</li>
+                    <li><span>How do I leave Team Rubicon?</span>
+                        <br>While we would be sad to see you go, we understand if the time or situation is not right. Please submit a ticket to our <a href="http://help.teamrubiconusa.org/">HelpDesk</a> and we’ll begin the process of inactivating your profile.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
